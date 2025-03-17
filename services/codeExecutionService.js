@@ -21,7 +21,7 @@ const executeCode = async (language, code) => {
       headers: {
         'content-type': 'application/json',
         'X-RapidAPI-Host': 'judge0-ce.p.rapidapi.com',
-        'X-RapidAPI-Key': process.env.TU_API_KEY_AQUI
+        'X-RapidAPI-Key': process.env.RAPIDAPI_KEY
       },
       data: {
         language_id: languageId,
@@ -55,7 +55,7 @@ const getSubmissionResult = async (token) => {
         url: `https://judge0-ce.p.rapidapi.com/submissions/${token}?base64_encoded=false&fields=*`,
         headers: {
           'X-RapidAPI-Host': 'judge0-ce.p.rapidapi.com',
-          'X-RapidAPI-Key': process.env.TU_API_KEY_AQUI
+          'X-RapidAPI-Key': process.env.RAPIDAPI_KEY
         }
       });
 
